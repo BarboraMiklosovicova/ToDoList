@@ -1,0 +1,39 @@
+@use "variables" as v;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+
+@mixin button {
+  cursor: pointer;
+  padding: 8px;
+  width: fit-content;
+  transition: 1s;
+  border: none;
+  color: v.$text_color;
+  border-radius: 5px;
+}
+
+@mixin media {
+  .nav{
+    justify-content: space-between;
+    flex-direction: row;
+    margin:auto;
+    width: 90%; 
+  }
+
+  .userInput{
+    width: 400px;
+  }
+
+
+  .items-container{
+    justify-content: center;
+    width: 70%;
+    height: auto;
+    margin-top: 70px;
+  }
+}
+
+@mixin icons {
+  
+}

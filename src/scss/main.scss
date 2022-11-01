@@ -1,0 +1,102 @@
+@use "mixin" as mix;
+@use "variables" as v;
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(to right, v.$primary, #ffe4da);
+}
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100vw;
+  }
+
+.nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90vw;
+}
+
+.nav h4 {
+  font-size: 30px;
+  color: v.$text_color;
+  text-shadow: 2px 2px 4px v.$text_color;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 2px;
+}
+
+.bi {
+  margin: 10px;
+}
+
+.userInput{
+  text-align: center;
+  width: 250px;
+}
+
+#input{
+  width: 70%;
+  outline: none;
+  padding: 8px;
+  border: 1px solid v.$primary;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 12px;
+}
+
+#input:focus{
+  box-shadow: 0 0 15px v.$primary;
+}
+
+.addItemBtn{
+  @include mix.button;
+  background-color: transparent;
+  padding: 2px;
+  font-size: 15px;
+}
+
+.addItemBtn:hover{
+  background-color: v.$secondary;
+  transition: 1s;
+}
+
+.items-container{
+  width: auto;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.item{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  padding: 10px;
+  color: v.$text_color;
+  margin-top: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  background-color: white;
+}  
+
+
+
+.to-do-items i {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+@media screen and (min-width: 768px) {
+  @include mix.media;
+}
