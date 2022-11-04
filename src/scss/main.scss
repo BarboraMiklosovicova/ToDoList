@@ -70,7 +70,7 @@ body{
   transition: 1s;
 }
 
-.items-container{
+.tasks-container{
   width: auto;
   margin: auto;
   margin-top: 30px;
@@ -95,6 +95,11 @@ body{
 .to-do-items i {
   cursor: pointer;
   margin: 0 5px;
+}
+
+.completedTacks-container{
+  border: 1px solid palevioletred;
+  height: 40vh;
 }
 
 @media screen and (min-width: 768px) {
